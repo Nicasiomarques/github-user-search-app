@@ -2,10 +2,8 @@
   "name": "github-user-search-app",
   "version": "1.0.0",
   "description": "A challenge from frontend mentor",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sass -w Frontend/style/main.sass:Frontend/style.min.css"
+    "start": "sass -w Frontend/style/main.scss:Frontend/style.min.css"
   },
   "repository": {
     "type": "git",
