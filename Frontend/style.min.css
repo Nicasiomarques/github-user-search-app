@@ -1,3 +1,12 @@
+body {
+  font-size: rem(20px);
+}
 
+.container {
+  margin-inline: auto;
+  max-width: 730px;
+  width: 100%;
+  background: #0079ff;
+}
 
 /*# sourceMappingURL=style.min.css.map */
