@@ -19,11 +19,7 @@ html {
 
 body {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Space Mono", sans-serif;
-  font-size: 16px;
 }
 
 .heading__primary {
@@ -59,6 +55,12 @@ body {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.22rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
