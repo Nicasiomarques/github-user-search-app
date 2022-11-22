@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": ""
+    "start": "sass -w Frontend/style/main.sass:Frontend/style.min.css"
   },
   "repository": {
     "type": "git",
