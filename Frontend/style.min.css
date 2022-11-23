@@ -139,7 +139,30 @@ body {
   font-weight: 700;
 }
 
+.c-stats {
+  padding-block: 15px;
+  list-style: none;
+  background-color: var(--color-bg);
+  display: flex;
+  max-width: 30rem;
+  justify-content: space-evenly;
+  margin-left: auto;
+  width: 100%;
+}
+.c-stats__item span {
+  color: var(--color-gray-300);
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  display: inline-block;
+  font-size: 0.8125rem;
+  margin-bottom: 0.625rem;
+}
+.c-stats__title {
+  color: var(--color-primary);
+}
+
 .c-user {
+  padding-bottom: 1.875rem;
   display: flex;
   align-items: center;
   position: relative;
