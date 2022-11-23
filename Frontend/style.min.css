@@ -251,6 +251,10 @@ body {
   align-items: center;
   text-decoration: none;
 }
+.c-social-media__item a:hover {
+  color: var(--color-blue);
+  transition: all 0.3s ease-in-out;
+}
 .c-social-media__item img {
   margin-right: 1.0625rem;
 }
