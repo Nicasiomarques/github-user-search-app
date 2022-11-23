@@ -36,7 +36,7 @@
 						</svg>
 					</button>
 				</header>
-				<form action="#" class="c-form">
+				<div action="#" class="c-form">
 					<img
 						src="/Frontend/images/icon-search.svg"
 						class="c-form__picture"
@@ -46,36 +46,33 @@
 						type="search"
 						class="c-input c-input--search"
 						placeholder="Search GitHub username..."
-						name="GitHub Username"
-						id="github-username"
+						data-id="inputSearch"
 					/>
-					<button class="c-btn c-btn--primary">search</button>
-				</form>
+					<button class="c-btn c-btn--primary" data-id="btnSearch">search</button>
+				</div>
 				<section class="app">
 					<header class="c-user">
-						<picture class="c-user__picture c-picture">
-							<img src="" alt="" />
-						</picture>
+						<img class="c-user__picture c-picture" data-id="avatar" alt="github avatar" />
 						<div class="c-user__inner">
-							<h2 class="c-user__name c-title-2">The Octocat</h2>
-							<span class="c-user__date">Joined 25 Jan 2011</span>
-							<span class="c-user__id"><a href="#">@octocat</a></span>
-							<p class="c-user__bio">This profile has no bio</p>
+							<h2 class="c-user__name c-title-2" data-id="name">The Octocat</h2>
+							<span class="c-user__date" data-id="joinDate">Joined 25 Jan 2011</span>
+							<span class="c-user__id"><a href="#" data-id="username">@octocat</a></span>
+							<p class="c-user__bio" data-id="bio">This profile has no bio</p>
 						</div>
 					</header>
 					<div class="app__body">
 						<ul class="c-stats">
 							<li class="c-stats__item">
 								<span class="c-stats__label">Repos</span>
-								<h3 class="c-stats__title">8</h3>
+								<h3 class="c-stats__title" data-id="repos">8</h3>
 							</li>
 							<li class="c-stats__item">
 								<span class="c-stats__label">Followers</span>
-								<h3 class="c-stats__title">3938</h3>
+								<h3 class="c-stats__title" data-id="followers">3938</h3>
 							</li>
 							<li class="c-stats__item">
 								<span class="c-stats__label">Following</span>
-								<h3 class="c-stats__title">9</h3>
+								<h3 class="c-stats__title" data-id="following">9</h3>
 							</li>
 						</ul>
 					</div>
@@ -87,7 +84,7 @@
 										src="/Frontend/images/icon-location.svg"
 										alt="icon icon-location"
 									/>
-									<span>San Francisco</span>
+									<span data-id="location">San Francisco</span>
 								</a>
 							</li>
 							<li class="c-social-media__item">
@@ -96,7 +93,7 @@
 										src="/Frontend/images/icon-twitter.svg"
 										alt="icon icon-twitter"
 									/>
-									<span>Not Available</span>
+									<span data-id="twitter">Not Available</span>
 								</a>
 							</li>
 							<li class="c-social-media__item">
@@ -105,7 +102,7 @@
 										src="/Frontend/images/icon-website.svg"
 										alt="icon icon-blog"
 									/>
-									<span style="text-decoration: underline"
+									<span data-id="blog" style="text-decoration: underline"
 										>https://github.blog</span
 									>
 								</a>
@@ -116,7 +113,7 @@
 										src="/Frontend/images/icon-company.svg"
 										alt="icon icon-location"
 									/>
-									<span>@github</span>
+									<span data-id="company">@github</span>
 								</a>
 							</li>
 						</ul>
