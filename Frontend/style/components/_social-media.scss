@@ -1,0 +1,24 @@
+.c-social-media {
+  display: grid;
+  justify-content: space-between;
+  align-items: flex-start;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 18px;
+  row-gap: 18px;
+  
+  &__item {
+    list-style: none;
+    
+    a {
+      color: var(--color-gray-300);
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    img {
+      margin-right: rem(17px);
+    }
+  }
+}

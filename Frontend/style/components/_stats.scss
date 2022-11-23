@@ -1,5 +1,6 @@
 .c-stats {
   @include padding-y(15px);
+  border-radius: rem(10px);
   list-style: none;
   background-color: var(--color-bg);
   display: flex;
@@ -7,8 +8,11 @@
   justify-content: space-evenly;
   margin-left: auto;
   width: 100%;
+  margin-bottom: rem(37px);
 
   &__item {
+    text-align: center;
+
     span {
       color: var(--color-gray-300);
       mix-blend-mode: normal;
