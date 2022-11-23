@@ -1,10 +1,10 @@
-@import 'abstracts/variables',
-'abstracts/mixins'
-, 'abstracts/functions'
-, 'base/reset'
-, 'base/typography'
-, 'layout/header'
-, 'layout/footer'
-, 'layout/_grid'
-, 'components/buttons'
-, 'themes/theme';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/_functions';
+@import 'base/reset';
+@import 'base/typography';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/grid';
+@import 'components/buttons';
+@import 'themes/theme';

@@ -1,11 +1,13 @@
 //LIGHT MODE COLORS
-$primary: #0079ff;
-$gray-400: #697c9a;
-$gray-300: #4b6a9b;
-$gray-200: #2b3442;
+::root {
+  --color-primary: #2B3442;
+  --color-blue: #0079ff;
+  --color-gray-400: #697c9a;
+  --color-gray-300: #4b6a9b;
+  --color-bg: #f6f8ff;
+  --color-white: #fefefe;
+}
+
 
 $container-max-width: 730px;
 
-body {
-  font-size: rem(20px);
-}

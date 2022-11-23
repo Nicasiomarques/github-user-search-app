@@ -1,10 +1,4 @@
-
-$html-font-size: 16px;
-@function stripUnit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-@function rem($pxValue) {
-  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+@function rem($size) {
+  @return calc($size / 16px * 1rem);
 }
 
