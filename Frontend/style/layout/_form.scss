@@ -1,0 +1,25 @@
+.c-form {
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 16px 30px -10px rgb(70 96 187 / 20%);
+  border-radius: rem(15px);
+  height: rem(69px);
+  margin-bottom: rem(24px);
+  padding-right: rem(10px);
+  
+  &__picture {
+    @include padding-x(24px);
+  }
+
+  .c-input {
+    border: none;
+    height: 100%;
+    width: calc(100% - 140px);
+
+    &::placeholder {
+      font-size: rem(18px);
+      color: var(--color-gray-300);
+    }
+  }
+}

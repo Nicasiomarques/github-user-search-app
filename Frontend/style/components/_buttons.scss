@@ -1,5 +1,15 @@
-.btn {
+.c-btn {
   background-color: transparent;
+  border-radius: rem(10px);
+  color: var(--color-white);
   outline: none;
   border: none;
+  height: rem(50px);
+  text-transform: capitalize;
+
+  &--primary {
+    min-width: rem(106px);
+    background-color: var(--color-blue);
+    font-weight: 700;
+  }
 }

@@ -1,4 +1,4 @@
-::root {
+body {
   --color-primary: #2B3442;
   --color-blue: #0079ff;
   --color-gray-400: #697c9a;
@@ -83,6 +83,29 @@ body {
   text-transform: uppercase;
 }
 
+.c-form {
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
+  border-radius: 0.9375rem;
+  height: 4.3125rem;
+  margin-bottom: 1.5rem;
+  padding-right: 0.625rem;
+}
+.c-form__picture {
+  padding-inline: 24px;
+}
+.c-form .c-input {
+  border: none;
+  height: 100%;
+  width: calc(100% - 140px);
+}
+.c-form .c-input::placeholder {
+  font-size: 1.125rem;
+  color: var(--color-gray-300);
+}
+
 body {
   background-color: var(--color-bg);
   display: flex;
@@ -91,18 +114,27 @@ body {
 }
 
 .app {
+  background-color: var(--color-white);
   box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
 }
 
 .container {
-  background-color: var(--color-white);
   width: 730px;
 }
 
-.btn {
+.c-btn {
   background-color: transparent;
+  border-radius: 0.625rem;
+  color: var(--color-white);
   outline: none;
   border: none;
+  height: 3.125rem;
+  text-transform: capitalize;
+}
+.c-btn--primary {
+  min-width: 6.625rem;
+  background-color: var(--color-blue);
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.min.css.map */
