@@ -7,15 +7,25 @@
   height: rem(69px);
   margin-bottom: rem(24px);
   padding-right: rem(10px);
+
+  &:hover .c-form__picture {
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
+  }
   
   &__picture {
     @include padding-x(24px);
+    transition: all .3s ease-in-out;
   }
 
   .c-input {
     border: none;
     height: 100%;
     width: calc(100% - 140px);
+
+    &:focus {
+      outline: none;
+    }
 
     &::placeholder {
       font-size: rem(18px);

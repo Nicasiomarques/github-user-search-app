@@ -12,5 +12,11 @@
     min-width: rem(106px);
     background-color: var(--color-blue);
     font-weight: 700;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      background-color: var(--color-gray-300);
+    }
   }
 }

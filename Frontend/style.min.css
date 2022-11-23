@@ -100,13 +100,21 @@ body {
   margin-bottom: 1.5rem;
   padding-right: 0.625rem;
 }
+.c-form:hover .c-form__picture {
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+}
 .c-form__picture {
   padding-inline: 24px;
+  transition: all 0.3s ease-in-out;
 }
 .c-form .c-input {
   border: none;
   height: 100%;
   width: calc(100% - 140px);
+}
+.c-form .c-input:focus {
+  outline: none;
 }
 .c-form .c-input::placeholder {
   font-size: 1.125rem;
@@ -145,6 +153,11 @@ body {
   min-width: 6.625rem;
   background-color: var(--color-blue);
   font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+.c-btn--primary:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-gray-300);
 }
 
 .c-stats {
@@ -181,7 +194,6 @@ body {
   position: relative;
 }
 .c-user__picture {
-  background-color: red;
   display: block;
   border-radius: 50%;
   margin-right: 2.3125rem;
@@ -199,7 +211,7 @@ body {
 .c-user__date {
   position: absolute;
   right: 0;
-  top: 10%;
+  top: 0.625rem;
   color: var(--color-gray-400);
   display: inline-block;
   font-size: 0.9375rem;
