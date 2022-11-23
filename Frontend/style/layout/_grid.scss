@@ -7,7 +7,9 @@ body {
 
 .app {
   background-color: var(--color-white);
+  border-radius: rem(15px);
   box-shadow: 0 16px 30px -10px rgb(70 96 187 / 20%);
+  padding: rem(48px);
 }
 
 .container {

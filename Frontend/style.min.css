@@ -115,7 +115,9 @@ body {
 
 .app {
   background-color: var(--color-white);
+  border-radius: 0.9375rem;
   box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
+  padding: 3rem;
 }
 
 .container {
@@ -135,6 +137,52 @@ body {
   min-width: 6.625rem;
   background-color: var(--color-blue);
   font-weight: 700;
+}
+
+.c-user {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.c-user__picture {
+  background-color: red;
+  display: block;
+  border-radius: 50%;
+  margin-right: 2.3125rem;
+  width: 7.3125rem;
+  height: 7.3125rem;
+}
+.c-user__name {
+  display: inline-block;
+  font-size: 1.625rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 2.40625rem;
+  margin-bottom: 0.3125rem;
+}
+.c-user__date {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  color: var(--color-gray-400);
+  display: inline-block;
+  font-size: 0.9375rem;
+  margin-left: auto;
+}
+.c-user__id {
+  color: var(--color-blue);
+  display: block;
+  margin-bottom: 1.5625rem;
+}
+.c-user__id a {
+  text-decoration: none;
+  color: currentColor;
+}
+.c-user__bio {
+  color: var(--color-gray-300);
+  font-size: 0.9375rem;
+  mix-blend-mode: normal;
+  opacity: 0.75;
 }
 
 /*# sourceMappingURL=style.min.css.map */

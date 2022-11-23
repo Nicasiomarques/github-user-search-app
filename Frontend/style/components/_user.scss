@@ -1,0 +1,51 @@
+.c-user {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__picture {
+    background-color: red;
+    display: block;
+    border-radius: 50%;
+    margin-right: rem(37px);
+    width: rem(117px);
+    height: rem(117px);
+  }
+
+  &__name {
+    display: inline-block;
+    font-size: rem(26px);
+    color: var(--color-primary);
+    font-weight: 700;
+    line-height: rem(38.5px);
+    margin-bottom: rem(5px);
+  }
+
+  &__date {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    color: var(--color-gray-400);
+    display: inline-block;
+    font-size: rem(15px);
+    margin-left: auto;
+  }
+
+  &__id {
+    color: var(--color-blue);
+    display: block;
+    margin-bottom: rem(25px);
+    
+    a {
+      text-decoration: none;
+      color: currentColor;
+    }
+  }
+
+  &__bio {
+    color: var(--color-gray-300);
+    font-size: rem(15px);
+    mix-blend-mode: normal;
+    opacity: 0.75;
+  }
+}
