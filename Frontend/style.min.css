@@ -99,6 +99,12 @@ body {
   height: 4.3125rem;
   margin-bottom: 1.5rem;
   padding-right: 0.625rem;
+  transition: ease-in-out all 0.2s;
+}
+.c-form:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+  box-shadow: 0 20px 35px 5px rgba(70, 96, 187, 0.2);
 }
 .c-form:hover .c-form__picture {
   transform: rotate(90deg);
@@ -133,10 +139,15 @@ body {
   border-radius: 0.9375rem;
   box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
   padding: 3rem;
+  transition: ease-in-out all 0.2s;
+}
+.app:hover {
+  box-shadow: 0px 20px 35px -5px rgba(70, 96, 187, 0.2);
+  transform: scale(1.03);
 }
 
 .container {
-  width: 730px;
+  width: 45.625rem;
 }
 
 .c-btn {
