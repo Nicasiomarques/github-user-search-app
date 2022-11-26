@@ -9,7 +9,7 @@ export const githubService = ((httpClient = fetchAdapter) => {
     });
 
   const enShortText = (text, size = 15, end = '...') =>
-    `${text?.slice(0, size)}${text.length > size ? end : ''}`
+    `${text?.slice(0, size)}${text?.length > size ? end : ''}`
 
   const mapToGithubUser = user => ({
     bio: user.bio ?? 'This profile has no bio',
@@ -25,13 +25,14 @@ export const githubService = ((httpClient = fetchAdapter) => {
     joinDate: formatDate(user.created_at),
     twitter: user.twitter_username ?? 'Not Available'
   })
-
-  const getDataByUsername = async username =>
-    httpClient({ url: `https://api.github.com/users/${username}` })
+  
+  const getDataByUsername = async (username, signal = null) => {
+    return httpClient({ url: `https://api.github.com/users/${username}`, signal })
       .then(mapToGithubUser)
       .catch(highLevelMessage('Unable to load the user in requested!'))
+  }
 
   return {
-    getDataByUsername
+    getDataByUsername,
   }
 })()
