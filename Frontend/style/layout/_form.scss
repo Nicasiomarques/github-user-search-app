@@ -9,7 +9,7 @@
   padding-right: rem(10px);
   transition: ease-in-out all .2s;
 
-  &:hover  {
+  &:focus-within {
     transform: scale(1.02);
     cursor: pointer;
     box-shadow: 0 20px 35px 5px rgb(70 96 187 / 20%);
