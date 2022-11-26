@@ -101,7 +101,7 @@ body {
   padding-right: 0.625rem;
   transition: ease-in-out all 0.2s;
 }
-.c-form:hover {
+.c-input:focus .c-form {
   transform: scale(1.02);
   cursor: pointer;
   box-shadow: 0 20px 35px 5px rgba(70, 96, 187, 0.2);
