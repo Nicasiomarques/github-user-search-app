@@ -3,8 +3,9 @@ export const highLevelMessage = message => err => {
   return Promise.reject(message);
 };
 
-export const fetchAdapter = ({ method, headers, body, url }) => {
+export const fetchAdapter = ({ method, headers, body, url, signal }) => {
   return fetch(url, {
+    signal,
     method,
     body: JSON.stringify(body),
     headers: {

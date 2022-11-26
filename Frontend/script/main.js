@@ -3,13 +3,16 @@ import { githubService } from './github-service.js'
 
 (() => {
   const { inputSearch, btnSearch } = DOMRefs
-  
+  let abortController = new AbortController()
+
   const getUserAndPopulateScreen = () => {
     const username = inputSearch.value
     if (!username) return
     toggleLoad()
+    abortController.abort()
+    abortController = new AbortController()
     githubService
-      .getDataByUsername(username)
+      .getDataByUsername(username, abortController.signal)
       .then(populateGithubUser)
       .then(mappedUser => {
         toggleLoad()
