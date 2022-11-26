@@ -13,3 +13,8 @@
 @mixin padding-y($value) {
   padding-block: $value
 }
+
+@mixin squares($size) {
+  height: $size;
+  width: $size;
+}
