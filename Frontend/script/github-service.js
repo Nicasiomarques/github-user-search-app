@@ -8,11 +8,14 @@ export const githubService = ((httpClient = fetchAdapter) => {
       day: 'numeric'
     });
 
+  const enShortText = (text, size = 15, end = '...') =>
+    `${text?.slice(0, size)}${text.length > size ? end : ''}`
+
   const mapToGithubUser = user => ({
     bio: user.bio ?? 'This profile has no bio',
     username: `@${user.login}`,
     followers: user.followers ?? 0,
-    name: user.name ?? 'Has no name',
+    name: enShortText(user.name) ?? 'Has no name',
     following: user.following ?? 0,
     company: user.company ?? 'Has no company',
     blog: user.blog ?? 'Has no blog',
@@ -24,7 +27,7 @@ export const githubService = ((httpClient = fetchAdapter) => {
   })
 
   const getDataByUsername = async username =>
-    httpClient({ url:`https://api.github.com/users/${username}` })
+    httpClient({ url: `https://api.github.com/users/${username}` })
       .then(mapToGithubUser)
       .catch(highLevelMessage('Unable to load the user in requested!'))
 
