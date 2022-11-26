@@ -18,5 +18,10 @@
       transition: all 0.3s ease-in-out;
       background-color: var(--color-gray-300);
     }
+
+    &:disabled {
+      filter: brightness(50%);
+      cursor: not-allowed;
+    }
   }
 }
