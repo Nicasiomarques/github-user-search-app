@@ -1,0 +1,27 @@
+.c-btn {
+  background-color: transparent;
+  border-radius: rem(10px);
+  color: var(--color-white);
+  outline: none;
+  border: none;
+  height: rem(50px);
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &--primary {
+    min-width: rem(106px);
+    background-color: var(--color-blue);
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      background-color: var(--color-gray-300);
+    }
+
+    &:disabled {
+      filter: brightness(50%);
+      cursor: not-allowed;
+    }
+  }
+}

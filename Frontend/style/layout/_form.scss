@@ -1,0 +1,42 @@
+.c-form {
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 16px 30px -10px rgb(70 96 187 / 20%);
+  border-radius: rem(15px);
+  height: rem(69px);
+  margin-bottom: rem(24px);
+  padding-right: rem(10px);
+  transition: ease-in-out all .2s;
+
+  &:hover  {
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 0 20px 35px 5px rgb(70 96 187 / 20%);
+  }
+
+  &:hover .c-form__picture {
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
+  }
+  
+  &__picture {
+    @include padding-x(24px);
+    transition: all .3s ease-in-out;
+  }
+
+  .c-input {
+    border: none;
+    height: 100%;
+    width: calc(100% - 140px);
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-size: rem(18px);
+      color: var(--color-gray-300);
+    }
+  }
+}

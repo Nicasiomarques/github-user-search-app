@@ -1,0 +1,47 @@
+body {
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  background-color: var(--color-white);
+  border-radius: rem(15px);
+  box-shadow: 0 16px 30px -10px rgb(70 96 187 / 20%);
+  padding: rem(48px);
+  transition: ease-in-out all .2s;
+
+  &:hover {
+    box-shadow: 0px 20px 35px -5px rgb(70 96 187 / 20%);
+    transform: scale(1.03);
+  }
+}
+
+.container {
+  width: rem(730px);
+}
+
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.shine {
+  background: #f6f7f8;
+  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  display: inline-block;
+  position: relative;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeholderShimmer;
+  animation-timing-function: linear;
+}

@@ -1,0 +1,26 @@
+.c-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+
+  &__title {
+    color: #222731;
+    font-size: rem(26px);
+    font-weight: 700;
+    line-height: 38.51px;
+  }
+
+  &-theme-switch-btn {
+    display: flex;
+    align-items: center;
+
+    span {
+      color: var(--color-gray-400);
+      font-size: rem(13px);
+      font-weight: 700;
+      line-height: rem(19.25px);
+      margin-right: rem(16px);
+      text-transform: uppercase;
+    }
+  }
+}

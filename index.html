@@ -1,29 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="stylesheet" href="/Frontend/style.min.css" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="/Frontend/images/favicon-32x32.png"
-		/>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Frontend Mentor | GitHub user search app</title>
-	</head>
-	<body>
+	<link rel="stylesheet" href="/Frontend/style.min.css" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/Frontend/images/favicon-32x32.png" />
+
+	<title>Frontend Mentor | GitHub user search app</title>
+</head>
+
+<body>
+	<main data-id="container" class="container">
 		<header class="c-header">
-			<div class="container">
-				Change theme icon
-				<form action="#" class="c-form">
-					<input type="search" class="c-input c-input--search" />
-					<button class="c-btn c-btn--primary">search</button>
-				</form>
-			</div>
+			<h1 class="c-header__title c-title">devfinder</h1>
+			<button class="c-header-theme-switch-btn c-btn">
+				<span>Dark</span>
+				<svg class="header-theme-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" id="moon">
+					<path
+						d="M19.513 11.397a.701.701 0 00-.588.128 7.496 7.496 0 01-2.276 1.336 7.101 7.101 0 01-2.583.462 7.505 7.505 0 01-5.32-2.209 7.568 7.568 0 01-2.199-5.342c0-.873.154-1.72.41-2.49a6.904 6.904 0 011.227-2.21.657.657 0 00-.102-.924.701.701 0 00-.589-.128C5.32.61 3.427 1.92 2.072 3.666A10.158 10.158 0 000 9.83c0 2.8 1.125 5.342 2.967 7.19a10.025 10.025 0 007.16 2.98c2.353 0 4.527-.822 6.266-2.183a10.13 10.13 0 003.58-5.624.623.623 0 00-.46-.796z"
+						fill="#697C9A" fill-rule="nonzero" />
+				</svg>
+			</button>
 		</header>
-	</body>
-	<script src="/Frontend/script/main.js"></script>
+		<div action="#" class="c-form">
+			<img src="/Frontend/images/icon-search.svg" class="c-form__picture" alt="Search icon" />
+			<input type="search" class="c-input c-input--search" placeholder="Search GitHub username..."
+				data-id="inputSearch" />
+			<button class="c-btn c-btn--primary" data-id="btnSearch">
+				search
+			</button>
+		</div>
+		<section class="app">
+			<header class="c-user">
+				<img class="c-user__picture c-picture" data-id="avatar" alt="github avatar" src="/Frontend/images/user.png" />
+				<div class="c-user__inner">
+					<h2 class="c-user__name c-title-2" data-id="name">The Octocat</h2>
+					<span class="c-user__date" data-id="joinDate">Joined 25 Jan 2011</span>
+					<span class="c-user__id"><a href="#" data-id="username">@octocat</a></span>
+					<p class="c-user__bio" data-id="bio">This profile has no bio</p>
+				</div>
+			</header>
+			<div class="app__body">
+				<ul class="c-stats">
+					<li class="c-stats__item">
+						<span class="c-stats__label">Repos</span>
+						<h3 class="c-stats__title" data-id="repos">8</h3>
+					</li>
+					<li class="c-stats__item">
+						<span class="c-stats__label">Followers</span>
+						<h3 class="c-stats__title" data-id="followers">3938</h3>
+					</li>
+					<li class="c-stats__item">
+						<span class="c-stats__label">Following</span>
+						<h3 class="c-stats__title" data-id="following">9</h3>
+					</li>
+				</ul>
+			</div>
+			<footer class="c-footer">
+				<ul class="c-social-media">
+					<li class="c-social-media__item">
+						<a href="#">
+							<img src="/Frontend/images/icon-location.svg" alt="icon icon-location" />
+							<span data-id="location">San Francisco</span>
+						</a>
+					</li>
+					<li class="c-social-media__item">
+						<a href="#">
+							<img src="/Frontend/images/icon-twitter.svg" alt="icon icon-twitter" />
+							<span data-id="twitter">Not Available</span>
+						</a>
+					</li>
+					<li class="c-social-media__item">
+						<a href="https://github.blog">
+							<img src="/Frontend/images/icon-website.svg" alt="icon icon-blog" />
+							<span data-id="blog" style="text-decoration: underline">https://github.blog</span>
+						</a>
+					</li>
+					<li class="c-social-media__item">
+						<a href="#">
+							<img src="/Frontend/images/icon-company.svg" alt="icon icon-location" />
+							<span data-id="company">@github</span>
+						</a>
+					</li>
+				</ul>
+			</footer>
+		</section>
+	</main>
+</body>
+<script type="module" src="/Frontend/script/main.js"></script>
+
 </html>
