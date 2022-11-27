@@ -5,11 +5,14 @@
   position: relative;
 
   &__picture {
+    @include squares(117px);
     display: block;
     border-radius: 50%;
     margin-right: rem(37px);
-    width: rem(117px);
-    height: rem(117px);
+
+    @media (max-width: 568px) {
+      @include squares(70px);
+    }
   }
 
   &__name {
@@ -19,6 +22,12 @@
     font-weight: 700;
     line-height: rem(38.5px);
     margin-bottom: rem(5px);
+
+    @media (max-width: 568px) {
+      line-height: 0;
+      font-size: rem(16px);
+      margin-bottom: 0;
+    }
   }
 
   &__date {
@@ -29,12 +38,23 @@
     display: inline-block;
     font-size: rem(15px);
     margin-left: auto;
+
+    @media (max-width: 568px) {
+      font-size: rem(13px);
+      position: static;
+      display: block;
+    }
   }
 
   &__id {
     color: var(--color-blue);
     display: block;
     margin-bottom: rem(25px);
+
+    @media (max-width: 568px) {
+      font-size: rem(13px);
+      margin-bottom: 0;
+    }
     
     a {
       text-decoration: none;
@@ -47,5 +67,6 @@
     font-size: rem(15px);
     mix-blend-mode: normal;
     opacity: 0.75;
+    padding-bottom: rem(30px);
   }
 }

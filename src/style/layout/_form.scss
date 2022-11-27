@@ -1,4 +1,5 @@
 .c-form {
+  @include padding-x(10px);
   background-color: var(--color-white);
   display: flex;
   align-items: center;
@@ -6,7 +7,6 @@
   border-radius: rem(15px);
   height: rem(69px);
   margin-bottom: rem(24px);
-  padding-right: rem(10px);
   transition: ease-in-out all .2s;
 
   &:focus-within {
@@ -23,12 +23,21 @@
   &__picture {
     @include padding-x(24px);
     transition: all .3s ease-in-out;
+
+    @media (max-width: 568px) {
+      @include padding-x(0);
+      padding-right: rem(10px);
+    }
   }
 
   .c-input {
     border: none;
     height: 100%;
     width: calc(100% - 140px);
+
+    @media (max-width: 568px) {
+      width: calc(100% - 84px);
+    }
 
     &:focus {
       outline: none;
@@ -37,6 +46,10 @@
     &::placeholder {
       font-size: rem(18px);
       color: var(--color-gray-300);
+
+      @media (max-width: 568px) {
+        font-size: rem(13px);
+      }
     }
   }
 }

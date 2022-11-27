@@ -11,11 +11,11 @@
 	<title>Frontend Mentor | GitHub user search app</title>
 </head>
 
-<body>
+<body data-id="body">
 	<main data-id="container" class="container">
 		<header class="c-header">
 			<h1 class="c-header__title c-title">devfinder</h1>
-			<button class="c-header-theme-switch-btn c-btn">
+			<button data-id="btnSwitchTheme" class="c-header-theme-switch-btn c-btn">
 				<span>Dark</span>
 				<svg class="header-theme-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" id="moon">
 					<path
@@ -32,61 +32,85 @@
 				search
 			</button>
 		</div>
-		<section class="app">
-			<header class="c-user">
-				<img class="c-user__picture c-picture" data-id="avatar" alt="github avatar" src="src/images/user.png" />
-				<div class="c-user__inner">
-					<h2 class="c-user__name c-title-2" data-id="name">The Octocat</h2>
-					<span class="c-user__date" data-id="joinDate">Joined 25 Jan 2011</span>
-					<span class="c-user__id"><a href="#" data-id="username">@octocat</a></span>
+			<section class="app">
+					<header class="c-user">
+						<img
+							class="c-user__picture c-picture"
+							data-id="avatar"
+							alt="github avatar"
+							src="/src/images/user.png"
+						/>
+						<div class="c-user__inner">
+							<h2 class="c-user__name c-title-2" data-id="name">The Octocat</h2>
+							<span class="c-user__id"
+								><a href="#" data-id="username">@octocat</a></span
+							>
+							<span class="c-user__date" data-id="joinDate"
+								>Joined 25 Jan 2011</span
+							>
+						</div>
+					</header>
 					<p class="c-user__bio" data-id="bio">This profile has no bio</p>
-				</div>
-			</header>
-			<div class="app__body">
-				<ul class="c-stats">
-					<li class="c-stats__item">
-						<span class="c-stats__label">Repos</span>
-						<h3 class="c-stats__title" data-id="repos">8</h3>
-					</li>
-					<li class="c-stats__item">
-						<span class="c-stats__label">Followers</span>
-						<h3 class="c-stats__title" data-id="followers">3938</h3>
-					</li>
-					<li class="c-stats__item">
-						<span class="c-stats__label">Following</span>
-						<h3 class="c-stats__title" data-id="following">9</h3>
-					</li>
-				</ul>
+					<div class="app__body">
+						<ul class="c-stats">
+							<li class="c-stats__item">
+								<span class="c-stats__label">Repos</span>
+								<h3 class="c-stats__title" data-id="repos">8</h3>
+							</li>
+							<li class="c-stats__item">
+								<span class="c-stats__label">Followers</span>
+								<h3 class="c-stats__title" data-id="followers">3938</h3>
+							</li>
+							<li class="c-stats__item">
+								<span class="c-stats__label">Following</span>
+								<h3 class="c-stats__title" data-id="following">9</h3>
+							</li>
+						</ul>
+					</div>
+					<footer class="c-footer">
+						<ul class="c-social-media">
+							<li class="c-social-media__item">
+								<a href="#">
+									<img
+										src="/src/images/icon-location.svg"
+										alt="icon icon-location"
+									/>
+									<span data-id="location">San Francisco</span>
+								</a>
+							</li>
+							<li class="c-social-media__item">
+								<a href="#">
+									<img
+										src="/src/images/icon-twitter.svg"
+										alt="icon icon-twitter"
+									/>
+									<span data-id="twitter">Not Available</span>
+								</a>
+							</li>
+							<li class="c-social-media__item">
+								<a href="https://github.blog">
+									<img
+										src="/src/images/icon-website.svg"
+										alt="icon icon-blog"
+									/>
+									<span data-id="blog" style="text-decoration: underline"
+										>https://github.blog</span
+									>
+								</a>
+							</li>
+							<li class="c-social-media__item">
+								<a href="#">
+									<img
+										src="/src/images/icon-company.svg"
+										alt="icon icon-location"
+									/>
+									<span data-id="company">@github</span>
+								</a>
+							</li>
+						</ul>
+					</footer>
+				</section>
 			</div>
-			<footer class="c-footer">
-				<ul class="c-social-media">
-					<li class="c-social-media__item">
-						<a href="#">
-							<img src="src/images/icon-location.svg" alt="icon icon-location" />
-							<span data-id="location">San Francisco</span>
-						</a>
-					</li>
-					<li class="c-social-media__item">
-						<a href="#">
-							<img src="src/images/icon-twitter.svg" alt="icon icon-twitter" />
-							<span data-id="twitter">Not Available</span>
-						</a>
-					</li>
-					<li class="c-social-media__item">
-						<a href="https://github.blog">
-							<img src="src/images/icon-website.svg" alt="icon icon-blog" />
-							<span data-id="blog" style="text-decoration: underline">https://github.blog</span>
-						</a>
-					</li>
-					<li class="c-social-media__item">
-						<a href="#">
-							<img src="src/images/icon-company.svg" alt="icon icon-location" />
-							<span data-id="company">@github</span>
-						</a>
-					</li>
-				</ul>
-			</footer>
-		</section>
 	</main>
 </body>
 <script type="module" src="src/script/main.js"></script>

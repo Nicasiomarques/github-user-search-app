@@ -14,6 +14,11 @@
     font-weight: 700;
     transition: all 0.3s ease-in-out;
 
+    @media (max-width: 568px) {
+      min-width: rem(84px);
+      height: rem(46px);
+    }
+
     &:hover {
       transition: all 0.3s ease-in-out;
       background-color: var(--color-gray-300);

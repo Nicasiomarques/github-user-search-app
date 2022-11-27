@@ -1,6 +1,11 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
+<<<<<<< HEAD:Frontend/style/main.scss
+@import 'abstracts/_functions';
+@import 'abstracts/breakpoints';
+=======
 @import 'abstracts/functions';
+>>>>>>> 3cece01a48e7858c95cf7c4ab6e0bc160314cb3e:src/style/main.scss
 
 @import 'base/reset';
 @import 'base/typography';

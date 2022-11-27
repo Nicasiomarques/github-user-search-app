@@ -3,6 +3,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 568px) {
+    display: block;
+  }
 }
 
 .app {
@@ -12,6 +16,10 @@ body {
   padding: rem(48px);
   transition: ease-in-out all .2s;
 
+  @media (max-width: 568px) {
+    @include padding-x(24px);
+  }
+
   &:hover {
     box-shadow: 0px 20px 35px -5px rgb(70 96 187 / 20%);
     transform: scale(1.03);
@@ -19,6 +27,12 @@ body {
 }
 
 .container {
+  @include padding-x(rem(10px));
+
+  @media (max-width: 568px) {
+    width: 100%;
+  }
+
   width: rem(730px);
 }
 

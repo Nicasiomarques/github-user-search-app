@@ -6,15 +6,30 @@
   grid-template-rows: repeat(2, auto);
   column-gap: 18px;
   row-gap: 18px;
+
+  @media (max-width: 568px) {
+    display: block;
+  }
   
   &__item {
     list-style: none;
+
+    @media (max-width: 568px) {
+      &:not(:last-child) {
+        margin-bottom: rem(16px);
+      }
+    }
     
     a {
       color: var(--color-gray-300);
       display: flex;
       align-items: center;
       text-decoration: none;
+
+      &:hover {
+        color: var(--color-blue);
+        transition: all 0.3s ease-in-out;
+      }
     }
 
     img {
