@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A challenge from frontend mentor",
   "scripts": {
-    "start": "sass -w Frontend/style/main.scss:Frontend/style.min.css"
+    "start": "sass -w src/style/main.scss:src/style.min.css"
   },
   "repository": {
     "type": "git",
