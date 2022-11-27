@@ -20,18 +20,17 @@ export const githubService = ((httpClient = fetchAdapter) => {
     company: user.company ?? 'Has no company',
     blog: user.blog ?? 'Has no blog',
     location: user.location ?? 'Has no location',
-    avatar: user.avatar_url ?? '',
+    avatar: user.avatar_url ?? './src/images/user.png',
     repos: user.public_repos ?? 0,
     joinDate: formatDate(user.created_at),
     twitter: user.twitter_username ?? 'Not Available'
   })
   
-  const getDataByUsername = async (username, signal = null) => {
-    return httpClient({ url: `https://api.github.com/users/${username}`, signal })
+  const getDataByUsername = async (username, signal = null) => 
+     httpClient({ url: `https://api.github.com/users/${username}`, signal })
       .then(mapToGithubUser)
       .catch(highLevelMessage('Unable to load the user in requested!'))
-  }
-
+  
   return {
     getDataByUsername,
   }
