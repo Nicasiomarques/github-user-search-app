@@ -16,6 +16,8 @@ export const toggleLoad = () => {
   DOMRefs.container.classList.toggle('shine')
 }
 
+export const enterIsPressed = event => event.key === 'Enter' || event.keyCode === 13
+
 export const populateGithubUser = async (user, fallbacks = fallbackFields) => {
   const fallbackKeys = Object.keys(fallbacks) 
   const propsWithoutFallback = Object.keys(user).filter(key => !fallbackKeys.includes(key))
