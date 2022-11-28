@@ -1,4 +1,5 @@
 import { fetchAdapter, highLevelMessage } from "./httpClient.js"
+import { getCache, setCacheExpiration } from "./simple-cache.js";
 
 export const githubService = ((httpClient = fetchAdapter) => {
   const formatDate = date =>
@@ -25,12 +26,19 @@ export const githubService = ((httpClient = fetchAdapter) => {
     joinDate: formatDate(user.created_at),
     twitter: user.twitter_username ?? 'Not Available'
   })
-  
-  const getDataByUsername = async (username, signal = null) => 
-     httpClient({ url: `https://api.github.com/users/${username}`, signal })
-      .then(mapToGithubUser)
-      .catch(highLevelMessage('Unable to load the user in requested!'))
-  
+
+  const getDataByUsername = async (username, signal = null) => {
+    const cachedUser = getCache(username)
+    if (cachedUser) return cachedUser
+    try {
+      const user = await httpClient({ url: `https://api.github.com/users/${username}`, signal })
+      const mappedUser = mapToGithubUser(user)
+      setCacheExpiration(username, mappedUser)
+      return mappedUser
+    } catch (error) {
+      return highLevelMessage('was not possible to get the user data')(error)
+    }
+  }
   return {
     getDataByUsername,
   }
