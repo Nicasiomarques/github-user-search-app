@@ -8,13 +8,13 @@ import { githubService } from './github-service.js'
   const getUserAndPopulateScreen = () => {
     const username = inputSearch.value?.toLowerCase()
     if (!username) return
-    toggleLoad()
+    //toggleLoad()
     abortController.abort()
     abortController = new AbortController()
     githubService
       .getDataByUsername(username, abortController.signal)
       .then(populateGithubUser)
-      .finally(toggleLoad)
+      // .finally(toggleLoad)
   }
   btnSwitchTheme.onclick = toggleTheme
   btnSearch.onclick = getUserAndPopulateScreen
