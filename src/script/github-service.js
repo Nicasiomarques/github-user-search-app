@@ -1,4 +1,4 @@
-import { fetchAdapter, highLevelMessage } from "./httpClient.js"
+import { fetchAdapter } from "./httpClient.js"
 import { getCache, setCacheExpiration } from "./simple-cache.js";
 
 export const githubService = ((httpClient = fetchAdapter) => {
@@ -14,7 +14,7 @@ export const githubService = ((httpClient = fetchAdapter) => {
 
   const mapToGithubUser = user => ({
     bio: user.bio ?? 'This profile has no bio',
-    username: `@${user.login}`,
+    username: `@${user.login ?? 'not found'}`,
     followers: user.followers ?? 0,
     name: enShortText(user.name) ?? 'Has no name',
     following: user.following ?? 0,
@@ -30,15 +30,19 @@ export const githubService = ((httpClient = fetchAdapter) => {
   const getDataByUsername = async (username, signal = null) => {
     const cachedUser = getCache(username)
     if (cachedUser) return cachedUser
-    try {
-      const user = await httpClient({ url: `https://api.github.com/users/${username}`, signal })
-      const mappedUser = mapToGithubUser(user)
-      setCacheExpiration(username, mappedUser)
-      return mappedUser
-    } catch (error) {
-      return highLevelMessage('was not possible to get the user data')(error)
+    const responseHttp = await httpClient({ url: `https://api.github.com/users/${username}`, signal })
+    switch (responseHttp.statusCode) {
+      case 200:
+        const user = mapToGithubUser(responseHttp.body)
+        setCacheExpiration(username, user)
+        return user
+      case 404:
+        return []
+      default:
+        return Promise.reject('Something went wrong')
     }
   }
+
   return {
     getDataByUsername,
   }
