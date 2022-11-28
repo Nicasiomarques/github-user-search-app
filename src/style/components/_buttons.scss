@@ -7,6 +7,18 @@
   text-transform: capitalize;
   cursor: pointer;
 
+  &--theme {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: rem(10px);
+
+    span {
+      color: var(--txt-high-contrast);
+    }
+  }
+
   &--primary {
     color: #fff;
     min-width: rem(106px);

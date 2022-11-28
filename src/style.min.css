@@ -217,6 +217,16 @@ body {
   text-transform: capitalize;
   cursor: pointer;
 }
+.c-btn--theme {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.c-btn--theme span {
+  color: var(--txt-high-contrast);
+}
 .c-btn--primary {
   color: #fff;
   min-width: 6.625rem;
