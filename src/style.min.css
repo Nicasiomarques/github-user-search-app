@@ -100,6 +100,7 @@ body {
   height: 4.3125rem;
   margin-bottom: 1.5rem;
   transition: ease-in-out all 0.2s;
+  position: relative;
 }
 .c-form:focus-within {
   transform: scale(1.02);
@@ -127,10 +128,12 @@ body {
   height: 100%;
   font-size: 1.125rem;
   width: calc(100% - 140px);
+  position: relative;
 }
 @media (max-width: 568px) {
   .c-form .c-input {
     width: calc(100% - 84px);
+    font-size: 0.8125rem;
   }
 }
 .c-form .c-input:focus {
@@ -143,6 +146,19 @@ body {
 @media (max-width: 568px) {
   .c-form .c-input::placeholder {
     font-size: 0.8125rem;
+  }
+}
+.c-form .c-input__label {
+  color: var(--error);
+  position: absolute;
+  right: 7.625rem;
+  font-weight: 700;
+  display: none;
+}
+@media (max-width: 568px) {
+  .c-form .c-input__label {
+    font-size: 0.9375rem;
+    right: 6.25rem;
   }
 }
 
@@ -223,6 +239,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.625rem;
+  cursor: pointer;
 }
 .c-btn--theme span {
   color: var(--txt-high-contrast);
