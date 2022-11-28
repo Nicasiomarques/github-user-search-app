@@ -8,12 +8,20 @@ export const fallbackFields = {
 export const DOMRefs = {
   btnSearch: getRef('btnSearch'),
   inputSearch: getRef('inputSearch'),
-  container: getRef('container')
+  container: getRef('container'),
+  body: getRef('body'),
+  btnSwitchTheme: getRef('btnSwitchTheme')
 }
 
 export const toggleLoad = () => {
   DOMRefs.btnSearch.toggleAttribute('disabled')
   DOMRefs.container.classList.toggle('shine')
+}
+
+export const toggleTheme = () => {
+  DOMRefs.body.classList.toggle('dark-theme')
+  const themeRef = DOMRefs.btnSwitchTheme.querySelector('span')
+  themeRef.innerText = themeRef.textContent === 'Dark' ? 'Light' : 'Dark'
 }
 
 export const enterIsPressed = event => event.key === 'Enter' || event.keyCode === 13

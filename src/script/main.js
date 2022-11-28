@@ -1,12 +1,12 @@
-import { DOMRefs, populateGithubUser, toggleLoad, enterIsPressed } from "./handle-ui.js";
+import { DOMRefs, populateGithubUser, toggleLoad, enterIsPressed, toggleTheme } from "./handle-ui.js";
 import { githubService } from './github-service.js'
 
 (() => {
-  const { inputSearch, btnSearch } = DOMRefs
+  const { inputSearch, btnSearch, btnSwitchTheme } = DOMRefs
   let abortController = new AbortController()
 
   const getUserAndPopulateScreen = () => {
-    const username = inputSearch.value
+    const username = inputSearch.value?.toLowerCase()
     if (!username) return
     toggleLoad()
     abortController.abort()
@@ -19,7 +19,7 @@ import { githubService } from './github-service.js'
         return mappedUser
       })
   }
-
+  btnSwitchTheme.onclick = toggleTheme
   btnSearch.onclick = getUserAndPopulateScreen
   inputSearch.onkeyup = event => enterIsPressed(event) && getUserAndPopulateScreen()
 })()
