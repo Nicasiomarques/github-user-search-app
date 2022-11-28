@@ -1,7 +1,6 @@
 .c-btn {
   background-color: transparent;
   border-radius: rem(10px);
-  color: var(--bg-secondary);
   outline: none;
   border: none;
   height: rem(50px);
@@ -9,9 +8,10 @@
   cursor: pointer;
 
   &--primary {
+    color: #fff;
     min-width: rem(106px);
     background-color: var(--primary);
-    font-weight: 700;
+    font-weight: bold;
     transition: all 0.3s ease-in-out;
 
     @media (max-width: 568px) {

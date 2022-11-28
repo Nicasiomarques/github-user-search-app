@@ -62,7 +62,7 @@ body {
   padding-bottom: 20px;
 }
 .c-header__title {
-  color: #222731;
+  color: var(--txt-high-contrast);
   font-size: 1.625rem;
   font-weight: 700;
   line-height: 38.51px;
@@ -121,6 +121,8 @@ body {
   }
 }
 .c-form .c-input {
+  background-color: transparent;
+  color: var(--txt-mid-contrast);
   border: none;
   height: 100%;
   font-size: 1.125rem;
@@ -209,7 +211,6 @@ body {
 .c-btn {
   background-color: transparent;
   border-radius: 0.625rem;
-  color: var(--bg-secondary);
   outline: none;
   border: none;
   height: 3.125rem;
@@ -217,9 +218,10 @@ body {
   cursor: pointer;
 }
 .c-btn--primary {
+  color: #fff;
   min-width: 6.625rem;
   background-color: var(--primary);
-  font-weight: 700;
+  font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 568px) {
@@ -241,7 +243,7 @@ body {
   padding-block: 15px;
   border-radius: 0.625rem;
   list-style: none;
-  background-color: var(--color-bg);
+  background-color: var(--bg);
   display: flex;
   max-width: 30rem;
   justify-content: space-evenly;
@@ -253,15 +255,13 @@ body {
   text-align: center;
 }
 .c-stats__item span {
-  color: var(--txt-mid-contrast);
-  mix-blend-mode: normal;
-  opacity: 0.75;
+  color: var(--txt-high-contrast);
   display: inline-block;
   font-size: 0.8125rem;
   margin-bottom: 0.625rem;
 }
 .c-stats__title {
-  color: var(--text-high-contrast);
+  color: var(--txt-high-contrast);
 }
 
 .c-user {
@@ -286,7 +286,7 @@ body {
 .c-user__name {
   display: inline-block;
   font-size: 1.625rem;
-  color: var(--text-high-contrast);
+  color: var(--txt-high-contrast);
   font-weight: 700;
   line-height: 2.40625rem;
   margin-bottom: 0.3125rem;
@@ -301,7 +301,7 @@ body {
 .c-user__date {
   position: absolute;
   right: 0;
-  top: 0.625rem;
+  top: 1.25rem;
   color: var(--txt-low-contrast);
   display: inline-block;
   font-size: 0.9375rem;
@@ -332,8 +332,6 @@ body {
 .c-user__bio {
   color: var(--txt-mid-contrast);
   font-size: 0.9375rem;
-  mix-blend-mode: normal;
-  opacity: 0.75;
   padding-bottom: 1.875rem;
 }
 
@@ -389,6 +387,9 @@ body {
 }
 
 body.dark-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--bg);
   /* Darkmode */
   --primary: #0079ff;
@@ -405,12 +406,8 @@ body.dark-theme {
   --error: #f74646;
 }
 
-.light-theme {
+.hidden {
   display: none;
-}
-
-.dark-theme {
-  display: block;
 }
 
 /*# sourceMappingURL=style.min.css.map */

@@ -10,7 +10,9 @@ export const DOMRefs = {
   inputSearch: getRef('inputSearch'),
   container: getRef('container'),
   body: getRef('body'),
-  btnSwitchTheme: getRef('btnSwitchTheme')
+  btnSwitchTheme: getRef('btnSwitchTheme'),
+  btnIconSvgSun: getRef('themeIconSun'),
+  btnIconSvgMoon: getRef('themeIconMoon')
 }
 
 export const toggleLoad = () => {
@@ -22,6 +24,8 @@ export const toggleTheme = () => {
   DOMRefs.body.classList.toggle('dark-theme')
   const themeRef = DOMRefs.btnSwitchTheme.querySelector('span')
   themeRef.innerText = themeRef.textContent === 'Dark' ? 'Light' : 'Dark'
+  const btnIconSunRef = DOMRefs.btnIconSvgSun.classList.toggle('hidden')
+  const btnIconMoonRef = DOMRefs.btnIconSvgMoon.classList.toggle('hidden')
 }
 
 export const enterIsPressed = event => event.key === 'Enter' || event.keyCode === 13

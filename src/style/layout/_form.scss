@@ -31,6 +31,8 @@
   }
 
   .c-input {
+    background-color: transparent;
+    color: var(--txt-mid-contrast);
     border: none;
     height: 100%;
     font-size: rem(18px);
