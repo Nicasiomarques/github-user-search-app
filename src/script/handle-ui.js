@@ -24,8 +24,8 @@ export const toggleTheme = () => {
   DOMRefs.body.classList.toggle('dark-theme')
   const themeRef = DOMRefs.btnSwitchTheme.querySelector('span')
   themeRef.innerText = themeRef.textContent === 'Dark' ? 'Light' : 'Dark'
-  const btnIconSunRef = DOMRefs.btnIconSvgSun.classList.toggle('hidden')
-  const btnIconMoonRef = DOMRefs.btnIconSvgMoon.classList.toggle('hidden')
+  DOMRefs.btnIconSvgSun.classList.toggle('hidden')
+  DOMRefs.btnIconSvgMoon.classList.toggle('hidden')
 }
 
 export const enterIsPressed = event => event.key === 'Enter' || event.keyCode === 13
