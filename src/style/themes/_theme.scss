@@ -19,6 +19,7 @@ body {
 }
 
 body.dark-theme {
+  @include centralized;
   background-color: var(--bg);
 
   /* Darkmode */
@@ -41,11 +42,6 @@ body.dark-theme {
   --error: #f74646;
 }
 
-.light-theme {
+.hidden {
   display: none;
 }
-
-.dark-theme {
-  display: block;
-}
-

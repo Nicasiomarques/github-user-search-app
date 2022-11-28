@@ -18,3 +18,9 @@
   height: $size;
   width: $size;
 }
+
+@mixin centralized {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
