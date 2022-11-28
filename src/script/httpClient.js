@@ -3,14 +3,20 @@ export const highLevelMessage = message => err => {
   return Promise.reject(message);
 };
 
-export const fetchAdapter = ({ method, headers, body, url, signal }) => {
-  return fetch(url, {
+export const fetchAdapter = async ({ method, headers, body, url, signal }) => {
+  const response = await fetch(url, {
     signal,
     method,
-    body: JSON.stringify(body),
+    ...(method !== 'GET' && { body: JSON.stringify(body) }),
     headers: {
       'Content-Type': 'application/json',
       ...headers,
     }
-  }).then(res => res.ok ? res.json() : Promise.reject(res))
+  }).catch(error => error)
+
+  return {
+    statusCode: response.status,
+    body: await response.json(),
+    ...(response instanceof Error && { error: response }),
+  }
 }
