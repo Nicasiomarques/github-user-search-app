@@ -14,8 +14,13 @@
     display: flex;
     align-items: center;
 
+    &:hover span,
+     .header-theme-icon {
+      color: var(--theme-switch-btn-hover);
+    }
+
     span {
-      color: var(--color-gray-400);
+      color: var(--txt-low-contrast);
       font-size: rem(13px);
       font-weight: 700;
       line-height: rem(19.25px);

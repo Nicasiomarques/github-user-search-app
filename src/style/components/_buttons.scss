@@ -1,7 +1,7 @@
 .c-btn {
   background-color: transparent;
   border-radius: rem(10px);
-  color: var(--color-white);
+  color: var(--bg-secondary);
   outline: none;
   border: none;
   height: rem(50px);
@@ -10,7 +10,7 @@
 
   &--primary {
     min-width: rem(106px);
-    background-color: var(--color-blue);
+    background-color: var(--primary);
     font-weight: 700;
     transition: all 0.3s ease-in-out;
 
@@ -21,7 +21,7 @@
 
     &:hover {
       transition: all 0.3s ease-in-out;
-      background-color: var(--color-gray-300);
+      background-color: var(--primary-hover);
     }
 
     &:disabled {

@@ -1,8 +1,9 @@
 body {
-  background-color: var(--color-bg);
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  padding: rem(75px) rem(10px);
 
   @media (max-width: 568px) {
     display: block;
@@ -10,7 +11,7 @@ body {
 }
 
 .app {
-  background-color: var(--color-white);
+  background-color: var(--bg-secondary);
   border-radius: rem(15px);
   box-shadow: 0 16px 30px -10px rgb(70 96 187 / 20%);
   padding: rem(48px);

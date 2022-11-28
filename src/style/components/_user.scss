@@ -18,7 +18,7 @@
   &__name {
     display: inline-block;
     font-size: rem(26px);
-    color: var(--color-primary);
+    color: var(--text-high-contrast);
     font-weight: 700;
     line-height: rem(38.5px);
     margin-bottom: rem(5px);
@@ -34,7 +34,7 @@
     position: absolute;
     right: 0;
     top: rem(10px);
-    color: var(--color-gray-400);
+    color: var(--txt-low-contrast);
     display: inline-block;
     font-size: rem(15px);
     margin-left: auto;
@@ -47,7 +47,7 @@
   }
 
   &__id {
-    color: var(--color-blue);
+    color: var(--primary);
     display: block;
     margin-bottom: rem(25px);
 
@@ -63,7 +63,7 @@
   }
 
   &__bio {
-    color: var(--color-gray-300);
+    color: var(--txt-mid-contrast);
     font-size: rem(15px);
     mix-blend-mode: normal;
     opacity: 0.75;

@@ -21,13 +21,13 @@
     }
     
     a {
-      color: var(--color-gray-300);
+      color: var(--txt-mid-contrast);
       display: flex;
       align-items: center;
       text-decoration: none;
 
       &:hover {
-        color: var(--color-blue);
+        color: var(--primary);
         transition: all 0.3s ease-in-out;
       }
     }
