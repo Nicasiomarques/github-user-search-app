@@ -1,4 +1,4 @@
-import { DOMRefs, populateGithubUser, toggleLoad, enterIsPressed, toggleTheme } from "./handle-ui.js";
+import { DOMRefs, populateGithubUser, toggleLoad, enterIsPressed, toggleTheme, toggleLabelSearchError } from "./handle-ui.js";
 import { githubService } from './github-service.js'
 
 (() => {
@@ -15,6 +15,7 @@ import { githubService } from './github-service.js'
       .getDataByUsername(username, abortController.signal)
       .then(populateGithubUser)
       .finally(toggleLoad)
+      .finally(toggleLabelSearchError)
   }
   btnSwitchTheme.onclick = toggleTheme
   btnSearch.onclick = getUserAndPopulateScreen
