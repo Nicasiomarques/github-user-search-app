@@ -1,5 +1,16 @@
-body {
-  /* Lightmode */
+body.dark-theme {
+ @include dark-mode;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+   @include dark-mode;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+   /* Lightmode */
   --primary: #0079ff;
   --primary-hover: #60abff;
 
@@ -16,30 +27,7 @@ body {
 
   /* Neutral */
   --error: #f74646;
-}
-
-body.dark-theme {
-  @include centralized;
-  background-color: var(--bg);
-
-  /* Darkmode */
-  --primary: #0079ff;
-  --primary-hover: #60abff;
-
-  --txt-high-contrast: #fff;
-  --txt-mid-contrast: #ffff;
-  --txt-low-contrast: #fff;
-
-  --txt-search: #fff;
-  --txt-search-placeholder: #fff;
-
-  --bg: #141d2f;
-  --bg-secondary: #1e2a47;
-
-  --theme-switch-btn-hover: #90a4d4;
-
-  /* Neutral */
-  --error: #f74646;
+  }
 }
 
 .hidden {
