@@ -1,4 +1,4 @@
-import { DOMRefs, populateGithubUser, toggleLoad, enterIsPressed, toggleTheme } from "./handle-ui.js";
+import { DOMRefs, populateGithubUser, toggleLoad, enterIsPressed, toggleTheme, toggleLabelSearchError } from "./handle-ui.js";
 import { githubService } from './github-service.js'
 
 (() => {

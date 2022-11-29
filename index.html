@@ -18,7 +18,7 @@
 	<main data-id="container" class="container">
 		<header class="c-header">
 			<h1 class="c-header__title c-title">devfinder</h1>
-			<button class="header-theme-switch-btn btn" data-id="btnSwitchTheme">
+			<button class="header-theme-switch-btn c-btn--theme" data-id="btnSwitchTheme">
 					<span id="theme-switch-text">Dark</span>
 					<svg
 						class="c-header-theme-icon"
@@ -52,6 +52,7 @@
 		</header>
 		<div action="#" class="c-form">
 			<img src="src/images/icon-search.svg" class="c-form__picture" alt="Search icon" />
+			<label data-id="labelErrorSearch" class="c-input__label">No results</label>
 			<input type="search" class="c-input c-input--search" placeholder="Search GitHub username..."
 				data-id="inputSearch" />
 			<button class="c-btn c-btn--primary" data-id="btnSearch">

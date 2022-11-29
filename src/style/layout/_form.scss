@@ -8,6 +8,7 @@
   height: rem(69px);
   margin-bottom: rem(24px);
   transition: ease-in-out all .2s;
+  position: relative;
 
   &:focus-within {
     transform: scale(1.02);
@@ -37,9 +38,11 @@
     height: 100%;
     font-size: rem(18px);
     width: calc(100% - 140px);
+    position: relative;
 
     @media (max-width: 568px) {
       width: calc(100% - 84px);
+      font-size: rem(13px);
     }
 
     &:focus {
@@ -52,6 +55,19 @@
 
       @media (max-width: 568px) {
         font-size: rem(13px);
+      }
+    }
+
+    &__label {
+      color: var(--error);
+      position: absolute;
+      right: rem(122px);
+      font-weight: 700;
+      display: none;
+
+      @media (max-width: 568px) {
+        font-size: rem(15px);
+        right: rem(100px);
       }
     }
   }

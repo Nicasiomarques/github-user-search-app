@@ -12,7 +12,8 @@ export const DOMRefs = {
   body: getRef('body'),
   btnSwitchTheme: getRef('btnSwitchTheme'),
   btnIconSvgSun: getRef('themeIconSun'),
-  btnIconSvgMoon: getRef('themeIconMoon')
+  btnIconSvgMoon: getRef('themeIconMoon'),
+  labelErrorSearch: getRef('labelErrorSearch')
 }
 
 export const toggleLoad = () => {
@@ -30,9 +31,16 @@ export const toggleTheme = () => {
 
 export const enterIsPressed = event => event.key === 'Enter' || event.keyCode === 13
 
+export const toggleLabelSearchError = () => {
+  const teenSeconds = 8000
+  const displayError = DOMRefs.labelErrorSearch.style
+  displayError.display = 'block'
+  setInterval(() => (displayError.display = 'none'), teenSeconds)
+}
+
 export const populateGithubUser = async (user, fallbacks = fallbackFields) => {
   if (!Object.keys(user).length) {
-    alert('User not found')
+    toggleLabelSearchError()
     return
   }
   const fallbackKeys = Object.keys(fallbacks) 
