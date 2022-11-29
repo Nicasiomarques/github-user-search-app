@@ -15,7 +15,6 @@ import { githubService } from './github-service.js'
       .getDataByUsername(username, abortController.signal)
       .then(populateGithubUser)
       .finally(toggleLoad)
-      .finally(toggleLabelSearchError)
   }
   btnSwitchTheme.onclick = toggleTheme
   btnSearch.onclick = getUserAndPopulateScreen
