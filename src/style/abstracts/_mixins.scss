@@ -24,3 +24,25 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin dark-mode {
+  @include centralized;
+  background-color: var(--bg);
+
+  --primary: #0079ff;
+  --primary-hover: #60abff;
+
+  --txt-high-contrast: #fff;
+  --txt-mid-contrast: #ffff;
+  --txt-low-contrast: #fff;
+
+  --txt-search: #fff;
+  --txt-search-placeholder: #fff;
+
+  --bg: #141d2f;
+  --bg-secondary: #1e2a47;
+
+  --theme-switch-btn-hover: #90a4d4;
+
+  --error: #f74646;
+}
